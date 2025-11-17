@@ -21,4 +21,12 @@ git branch -M main
 git remote add origin https://github.com/KacperProfic/python-cli-template.git
 git push -u origin main
 
-gh repo create nazwa-projektu --source=. --public --push
+# 1. Sklonuj z template
+gh repo create github-user-activity --template KacperProfic/python-template --clone
+cd github-user-activity
+
+# 2. Usuń stare .venv (jeśli jakimś cudem jest)
+rm -rf .venv
+
+# 3. Stwórz nowe, czyste środowisko
+uv venv                  # ← tylko to!
