@@ -20,3 +20,5 @@ git commit -m "Initial clean Python template"
 git branch -M main
 git remote add origin https://github.com/KacperProfic/python-cli-template.git
 git push -u origin main
+
+gh repo create nazwa-projektu --source=. --public --push
